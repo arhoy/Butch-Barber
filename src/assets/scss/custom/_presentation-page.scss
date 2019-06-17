@@ -1,0 +1,55 @@
+.PresentationPage {
+    &__header {
+        background-color:rgba(0,0,0,0.5);
+        padding: 1rem 0rem;
+        color: $brand-danger;
+   
+        &-1 {  
+            font-size: 4rem !important;
+            font-family: 'Rock Salt';
+            @include respond(tab-land) { 
+                font-size: 3rem !important;
+            }
+            @include respond(tab-port) { 
+                font-size: 2.6rem !important;
+            }
+             @include respond(phone) { 
+                font-size: 2.3rem !important;
+            }
+        }
+        &-message {
+            color: $white;
+            font-family: serif;
+            font-style: italic;
+            padding: 0 1rem;
+            
+             @include respond(tab-land) { 
+                font-size: 1.6rem !important;
+            }
+            @include respond(tab-port) { 
+                font-size: 1.4rem !important;
+            }
+             @include respond(phone) { 
+                font-size: 1.2rem !important;
+            }
+
+            &::before, &::after {
+            content: ' ';
+            color: $brand-danger;
+            width: 25px;
+            height: 0;
+            padding-bottom: 7px;
+            border-top: 2px solid $brand-danger;
+            margin: 0 12px;
+            display: inline-block;
+            vertical-align: middle;
+            }
+        }
+     
+    }
+    
+    &__image {
+        // filter: blur(8px);
+        // -webkit-filter: blur(8px);
+    }
+}

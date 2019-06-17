@@ -1,0 +1,42 @@
+.Footer { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: $black;
+    margin: 0;
+    padding-top: 1rem;
+    &:hover {
+        color:$black;
+    }
+   &__ul  {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    margin-bottom: 0rem;
+   }
+   &__li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+   }
+   &__button {
+       background: white;
+       padding: 2rem;
+   }
+
+   &__link { 
+       color: $black;
+       &-primary {
+           font-size: 1.3rem;
+           font-family: "Rock Salt";
+         
+       }
+       &:hover, &:visited, &:active {
+        color: $danger !important;
+       }
+   }
+}

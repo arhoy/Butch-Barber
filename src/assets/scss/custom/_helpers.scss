@@ -1,0 +1,10 @@
+.custom__link {
+    color: $black;
+    &:hover {
+        font-weight: bolder;
+        color : $black;
+    }
+}
+.custom__li {
+    list-style: none;
+}
