@@ -2,7 +2,7 @@
   "name": "butch-barber",
   "version": "1.3.0",
   "private": true,
-  "homepage": "https://arhoy.github.io/Butch-Barber",
+  "homepage": "https://arhoy.github.io/butch-barber",
   "dependencies": {
     "@material-ui/core": "3.9.2",
     "@material-ui/icons": "3.0.2",
