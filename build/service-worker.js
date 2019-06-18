@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Butch-Barber/precache-manifest.9e7a6fdc1e0ecc03723147d6a251293d.js"
+  "/butch-barber/precache-manifest.0259df038f2b79be3549a8d2a6e12b56.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Butch-Barber/index.html", {
+workbox.routing.registerNavigationRoute("/butch-barber/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
