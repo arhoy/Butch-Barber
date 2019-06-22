@@ -6,7 +6,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 // @material-ui/icons
 import PinDrop from "@material-ui/icons/PinDrop";
-import Phone from "@material-ui/icons/Phone";
+
 import Check from "@material-ui/icons/Check";
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -29,6 +29,10 @@ class SectionContacts extends React.Component {
     this.state = {
       checked: []
     };
+  }
+  onSubmitSendMessageHandler(e){
+    e.preventDefault();
+    console.log('I was submitted!')
   }
   handleToggle(value) {
     const { checked } = this.state;
@@ -98,7 +102,11 @@ class SectionContacts extends React.Component {
                 </GridItem>
                 <GridItem xs={12} sm={5} md={5} className={classes.mlAuto}>
                   <Card className={classes.card1}>
-                    <form>
+                    <form 
+                      method = "POST" 
+                      onSubmit = {this.onSubmitSendMessageHandler}
+                      data-netlify = "true"
+                    >
                       <CardHeader
                         contact
                         color="danger"
@@ -112,6 +120,7 @@ class SectionContacts extends React.Component {
                             <CustomInput
                               labelText="First Name"
                               id="first"
+                              name = "FirstName"
                               formControlProps={{
                                 fullWidth: true
                               }}
@@ -120,6 +129,7 @@ class SectionContacts extends React.Component {
                           <GridItem xs={12} sm={6} md={6}>
                             <CustomInput
                               labelText="Last Name"
+                              name = "LastName"
                               id="last"
                               formControlProps={{
                                 fullWidth: true
@@ -130,6 +140,7 @@ class SectionContacts extends React.Component {
                         <CustomInput
                           labelText="Email Address"
                           id="email-address"
+                          name = "emailAddress"
                           formControlProps={{
                             fullWidth: true
                           }}
@@ -137,6 +148,7 @@ class SectionContacts extends React.Component {
                         <CustomInput
                           labelText="Your Message"
                           id="message"
+                          name = "message"
                           formControlProps={{
                             fullWidth: true
                           }}
@@ -164,8 +176,13 @@ class SectionContacts extends React.Component {
                           }
                           classes={{ label: classes.label }}
                           label="I'm not a robot"
+                          data-netlify-recaptcha= "true"
                         />
-                        <Button color="danger" className={classes.pullRight}>
+                        <Button
+                           color="danger" 
+                           className={classes.pullRight}
+                           type = "submit"
+                        >
                           Send Message
                         </Button>
                       </CardFooter>
